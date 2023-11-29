@@ -1,0 +1,195 @@
+/* ==========================================================================
+  Import CSS
+  ========================================================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ==========================================================================
+  CSS Reset
+  ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+  Custom CSS
+  ========================================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2rem;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.media {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.media img {
+    display: block;
+    margin: 0 auto;
+}
+
+.media::before {
+    color: #fff;
+    margin-left: 20px
+}
+
+.disappear {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+
+/* ==========================================================================
+  Media Queries
+  ========================================================================== */
+
+/* Pour le contenu supérieur à 1400px */
+
+.content {
+    height: 500px;
+    background-color: darkmagenta;
+}
+
+/* Sert juste à afficher la taille du viewport */
+.media::before {
+    content: "+1401px";
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media screen and (max-width: 1400px) {
+    /* Met moir un fond de couleur */
+    .content {
+        background-color: darkblue;
+    }
+
+    /* Met moi un background image */
+    .media {
+        background-image: url(images/photo-desktop-xl.jpg);
+
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    /* Sert juste à afficher la taille du viewport */
+    .media::before {
+        content: "-1400px";
+    }
+
+    /* Fait moi disparaitre l'image */
+    .media img {
+        display: none;
+    }
+    
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1200px) {
+    
+    .content {
+       background-color: darkgoldenrod;
+    }
+
+    /*
+        le mot-clé unset réinitialise la propriété afin que sa valeur soit la valeur héritée depuis l'élément parent ou soit la valeur initiale (s'il n'y a pas d'héritage)
+        source: https://developer.mozilla.org/fr/docs/Web/CSS/unset
+    */
+    /* .content {
+        background-color: unset;
+    } */
+
+    .media {
+        background-image: url(images/photo-desktop.jpg);
+    }
+
+    .media::before {
+        content: "-1200px";
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (max-width: 992px) {
+    
+    /* 
+        Je diminue la taille de ma font
+        Et je supprime la marge du bas sur le titre
+    
+    */
+    h1 {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+    }
+
+    /*
+        Faire disparaitre des elements
+
+        la propriété display avec la valeur none sur un élément entraînera son retrait de l'arbre d'accessibilité
+        source: https://developer.mozilla.org/fr/docs/Web/CSS/display
+
+        La propriété visibility peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible.
+        source: https://developer.mozilla.org/fr/docs/Web/CSS/visibility
+    */
+    .disappear {
+        display: none;
+    }
+
+    .content {
+        height: 300px;
+        background-color: darkred;
+    }
+
+    .media {
+        background-image: url(images/photo-tablet.jpg);
+    }
+
+    .media::before {
+        content: "-992px";
+    }
+
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 576px) { 
+
+    /* je diminue la taille de ma font */
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    /* 
+        Le mot clé initial applique la valeur initiale fournie par le navigateur
+        source: https://developer.mozilla.org/fr/docs/Web/CSS/initial 
+    */
+    .disappear {
+        display: initial;
+        font-size: 0.75rem;
+    }
+
+    .content {
+        background-color: darkslateblue;
+    }
+
+    .media {
+        background-image: url(images/photo-mobile.jpg);
+    }
+
+    .media::before {
+        content: "-576px";
+    }
+}
