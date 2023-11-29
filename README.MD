@@ -20,7 +20,7 @@ Exemple d'utilisation des différents breakpoints
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 }
 

@@ -72,7 +72,10 @@ h1 {
     content: "+1401px";
 }
 
-/* X-Large devices (large desktops, less than 1400px) */
+
+/*
+  X-Large devices (large desktops, less than 1400px)
+  ========================================================================== */
 @media screen and (max-width: 1400px) {
     /* Met moir un fond de couleur */
     .content {
@@ -99,7 +102,10 @@ h1 {
     
 }
 
-/* Large devices (desktops, less than 1200px) */
+
+/*
+  Large devices (desktops, less than 1200px)
+  ========================================================================== */
 @media screen and (max-width: 1200px) {
     
     .content {
@@ -123,7 +129,10 @@ h1 {
     }
 }
 
-/* Medium devices (tablets, less than 992px) */
+
+/*
+  Medium devices (tablets, less than 992px)
+  ========================================================================== */
 @media screen and (max-width: 992px) {
     
     /* 
@@ -164,8 +173,11 @@ h1 {
 
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
+
+/*
+  Small devices (landscape phones, less than 768px)
+  ========================================================================== */
+@media screen and (max-width: 768px) {
     .content {
         background-color: darkslategrey ;
     }
@@ -179,7 +191,10 @@ h1 {
     }
 }
 
-/* X-Small devices (portrait phones, less than 576px) */
+
+/*
+  X-Small devices (portrait phones, less than 576px)
+  ========================================================================== */
 @media screen and (max-width: 576px) { 
 
     /* je diminue la taille de ma font */
